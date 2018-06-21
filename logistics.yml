@@ -1,0 +1,12 @@
+#DataSource
+jdbc:
+  url: jdbc:sqlserver://192.168.70.71:1433;database=cxt_express
+  username: sa
+  password: yxt123!
+  name: dataSource
+  driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+#Mybatis
+mapper_path: /mapper/**.xml
+type_alias_package: com.bitauto.cxt.logistics.entity
+mybatis_config_file: mybatis-config.xml
