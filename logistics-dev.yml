@@ -17,3 +17,6 @@ jdbc:
 mapper_path: /mapper/**.xml
 type_alias_package: com.bitauto.cxt.logistics.entity
 mybatis_config_file: mybatis-config.xml
+
+env:
+  dev
