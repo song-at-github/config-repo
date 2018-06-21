@@ -1,1 +1,45 @@
 
+server:
+  port: 8503
+#eureka:
+#  client:
+#    serviceUrl:
+#          defaultZone: http://localhost:8761/eureka/
+#spring:
+#  application:
+#    name: logistics
+
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instance-id: logistics
+        service-name: logistics
+        heartbeat:
+          enabled: true
+          ttl-value: 5
+        health-check-url: /health
+        register-health-check: true
+  application:
+    name: logistics
+logging:
+  level:
+    org.springframework.cloud.consul: debug
+
+#DataSource
+jdbc:
+  url: jdbc:sqlserver://192.168.70.71:1433;database=cxt_express
+  username: sa
+  password: yxt123!
+  name: dataSource
+  driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+#Mybatis
+mapper_path: /mapper/**.xml
+type_alias_package: com.bitauto.cxt.logistics.entity
+mybatis_config_file: mybatis-config.xml
+
+
+
