@@ -1,5 +1,10 @@
 server:
   port: 8503
+
+logging:
+  level:
+    org.springframework.cloud.consul: debug
+
 #DataSource
 jdbc:
   url: jdbc:sqlserver://192.168.70.71:1433;database=cxt_express
